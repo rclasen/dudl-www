@@ -1,0 +1,16 @@
+^Makefile$
+~$
+^blib/
+\bCVS/
+.cvsignore
+\bdebian/dudl-www(/|$)
+\.aux$
+\.dvi$
+\.log$
+\.bak$
+\.old$
+\.swp$
+\.tar$
+\.tar.gz$
+\.autosave$
+\bpm_to_blib\b
