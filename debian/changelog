@@ -1,3 +1,9 @@
+dudl-www (0.0.2) unstable; urgency=low
+
+  * added href to download files/titles
+
+ -- Rainer Clasen <bj@zuto.de>  Sat,  8 Apr 2006 14:01:54 +0200
+
 dudl-www (0.0.1) unstable; urgency=low
 
   * initial release
