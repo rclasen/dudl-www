@@ -21,6 +21,7 @@ my $query =
 		"f.unit_id, ".
 		"trim(u.collection) || u.colnum as unit, ".
 		"f.dir || '/' || f.fname as file, ".
+		"stor_filename(u.collection,u.colnum,f.dir,f.fname) as path, ".
 		"f.broken, ".
 		"f.cmnt, ".
 		"f.title ".
@@ -79,9 +80,13 @@ while( $sth->fetch ){
 	foreach my $c( @col ){
 		if( $c eq "unit_id" ){
 		} elsif( $c eq "title" ) {
+		} elsif( $c eq "path" ) {
 		} elsif( $c eq "unit" ){
 			print td( a({href=>"units.pl?q=id=".$row{unit_id}},
 				$row{unit}));
+		} elsif( $c eq "file" ){
+			print td( a({href=>"/dudl/files/". $row{path}}, 
+				$row{file}));
 		} elsif( $c eq "id" && defined $row{title} ){
 			print td( a({href=>"titles.pl?q=t.id=".
 				$row{id}}, $row{id}));

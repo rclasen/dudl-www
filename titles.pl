@@ -7,6 +7,7 @@ use CGI qw( :standard *table );
 my $where = param( 'q' );
 my $dudl = new Dudl::DB;
 my $db = $dudl->db;
+my $nam = $dudl->naming;
 
 my $query =
 	"SELECT ".
@@ -88,6 +89,26 @@ while( $sth->fetch ){
 				$row{$c}));
 		} elsif( $c eq "a_artist" ){
 			print td( a({href=>"artists.pl?q=id=".$row{aa_id}},
+				$row{$c}));
+		} elsif( $c eq "title" ){
+			my $t = ($row{a_artist} =~ /^VARIOUS$/i) ?
+				"sampler" : "album";
+			my $f = $nam->fnormalize( $row{a_artist} ). "/".
+				$nam->dir( {
+					type => $t,
+					artist => $row{a_artist},
+					name => $row{album},
+				} ). "/".
+				$nam->fname( {
+					type => $t,
+					artist => $row{a_artist},
+					name => $row{album},
+				},{
+					artist => $row{t_artist},
+					num => $row{album_pos},
+					name => $row{title},
+				});
+			print td( a({href=>"/dudl/tracks/$f" },
 				$row{$c}));
 		} else {
 			print td( $row{$c} );

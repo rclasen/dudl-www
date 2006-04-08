@@ -11,3 +11,4 @@ MANIFEST.SKIP
 titles.pl
 TODO
 units.pl
+META.yml                                 Module meta-data (added by MakeMaker)
