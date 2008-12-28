@@ -3,12 +3,14 @@ artists.pl
 debian/changelog
 debian/control
 debian/copyright
+debian/dirs
 debian/rules
 files.pl
+LICENSE
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
+META.yml			Module meta-data (added by MakeMaker)
 titles.pl
 TODO
 units.pl
-META.yml                                 Module meta-data (added by MakeMaker)
