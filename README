@@ -1,0 +1,29 @@
+dudl-www
+========
+
+CGI frontend to browse the dudl-db,
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+Then put the resulting into your cgi-bin. DB parameters are automatically
+picked from dudlrc.
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  dudl
+
+COPYRIGHT AND LICENSE
+
+MIT License - please see the file LICENSE in this distribution.
+
+Copyright (C) 2002 Rainer Clasen
+
