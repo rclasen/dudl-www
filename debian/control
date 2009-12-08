@@ -7,7 +7,7 @@ Standards-Version: 3.5.1
 
 Package: dudl-www
 Architecture: all
-Depends: ${perl:Depends}, dudl-db
+Depends: ${perl:Depends}, dudl-db, apache | httpd
 Description: web frontend for the dudl database
  dudl-www is part of my dudl Music Database. This package offers a
  minimalistic web frontend to search the DB.

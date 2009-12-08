@@ -5,6 +5,7 @@ WriteMakefile(
     'NAME'		=> 'dudl-www',
     'VERSION'		=> '0.0.1',
     'PREREQ_PM'		=> {
+	# update debian/control, too!
     	'Dudl::DB'		=> 0,
 	}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
