@@ -2,7 +2,7 @@
 ~$
 ^blib/
 \bCVS/
-.cvsignore
+.gitignore
 \bdebian/dudl-www(/|$)
 \.aux$
 \.dvi$
