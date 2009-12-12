@@ -2,7 +2,7 @@
 
 #
 # Copyright (c) 2008 Rainer Clasen
-# 
+#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms described in the file LICENSE included in this
 # distribution.
@@ -51,7 +51,7 @@ print header,
 	start_html($head),
 	h1($head),
 	start_form,
-	"where: ", textfield( 
+	"where: ", textfield(
 		-name=>'q',
 		-default=>$where,
 		-override=>1,
@@ -123,7 +123,7 @@ while( $sth->fetch ){
 		}
 	}
 	print "</tr>";
-}       
+}
 
 print end_table(),p, "rows: ", $r;
 

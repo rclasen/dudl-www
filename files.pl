@@ -2,7 +2,7 @@
 
 #
 # Copyright (c) 2008 Rainer Clasen
-# 
+#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms described in the file LICENSE included in this
 # distribution.
@@ -51,7 +51,7 @@ print header,
 	start_html($head),
 	h1($head),
 	start_form,
-	"where: ", textfield( 
+	"where: ", textfield(
 		-name=>'q',
 		-default=>$where,
 		-override=>1,
@@ -93,7 +93,7 @@ while( $sth->fetch ){
 			print td( a({href=>"units.pl?q=id=".$row{unit_id}},
 				$row{unit}));
 		} elsif( $c eq "file" ){
-			print td( a({href=>"/dudl/files/". $row{path}}, 
+			print td( a({href=>"/dudl/files/". $row{path}},
 				$row{file}));
 		} elsif( $c eq "id" && defined $row{title} ){
 			print td( a({href=>"titles.pl?q=t.id=".
@@ -103,7 +103,7 @@ while( $sth->fetch ){
 		}
 	}
 	print "</tr>";
-}       
+}
 
 print end_table(),p, "rows: ", $r;
 
